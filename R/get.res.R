@@ -9,7 +9,7 @@
 #' @export
 get.res <- function(out,type='pearson',batch=NULL) {
     Y <- out$counts
-    if(class(Y)!='matrix') {
+    if(class(Y)[1]!='matrix') {
        Y <- as.matrix(Y)
     }
 
