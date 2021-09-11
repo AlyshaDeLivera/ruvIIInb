@@ -13,8 +13,8 @@ makeSCE <- function(obj,cData,batch=NULL) {
  cData$logLS<- log10(colSums(obj$counts))
  data.norm <- get.res(obj,type='logcounts',batch=batch)
  sce.obj   <- SingleCellExperiment::SingleCellExperiment(assays=list(counts=obj$counts,logcounts=data.norm),colData=cData)
- assays(sce.obj)$pearson      <-  get.res(obj,type='pearson',batch=batch)
- assays(sce.obj)$logcorrected <- log(get.res(obj,type='quantile',batch=batch)+1)
+ assays(sce.obj, withDimnames=FALSE)$pearson      <-  get.res(obj,type='pearson',batch=batch)
+ assays(sce.obj, withDimnames=FALSE)$logcorrected <- log(get.res(obj,type='quantile',batch=batch)+1)
  sce.obj
 }
 
