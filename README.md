@@ -3,9 +3,9 @@ This package removes unwanted variation from raw sequencing count data using Neg
 
 # Installation 
 ```{r eval=FALSE}
-devtools::install_github("limfuxing/ruvIIInb")
-```
-# Installation with vignette
-```{r eval=FALSE}
 devtools::install_github("limfuxing/ruvIIInb",build_vignettes = TRUE)
 ```
+
+# Vignette 
+https://bookdown.org/a2delivera/scRNAseq/
+
